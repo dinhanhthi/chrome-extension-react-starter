@@ -1,8 +1,9 @@
 import React from 'react'
 
 import './App.css'
+// 👇 Uncomment only if you use Previewjs (https://previewjs.com/)
+// import './assets/tailwind.css'
 import logo from './logo.svg'
-import './tailwind.css'
 
 function App() {
   return (

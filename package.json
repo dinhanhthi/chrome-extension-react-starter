@@ -6,6 +6,7 @@
     "start": "yarn watch:css && react-scripts start",
     "build": "react-scripts build",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "prettier": "prettier --write \"src/**/*.{ts,js,tsx,html}\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
