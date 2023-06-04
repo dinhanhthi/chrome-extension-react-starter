@@ -17,5 +17,6 @@
   },
   "editor.rulers": [100],
   // 👇 For error in src/styles/preflight.scss
-  "tailwindCSS.lint.invalidConfigPath": "ignore"
+  "tailwindCSS.lint.invalidConfigPath": "ignore",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
