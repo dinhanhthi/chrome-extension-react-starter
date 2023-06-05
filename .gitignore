@@ -5,7 +5,6 @@ dist
 yarn-error.log
 dist.zip
 dist-prod
-prod-packages
 .DS_Store
 *.suo
 *.ntvs*
