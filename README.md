@@ -1,6 +1,6 @@
 # 🦖 react-ts-tailwind-starter
 
-An all-in-one starter for React developers that supports workspace (eslint, prettier, vscode settings,...) and also a playground mode for quick review of changes.
+An all-in-one starter for React developers that supports workspace (eslint, prettier, vscode settings,...) and **also a playground mode** for quick review of changes.
 
 💡 If you're looking for a starter using TypeScript only (without React), check [this repository](https://github.com/dinhanhthi/chrome-extension-ts-starter)!
 
@@ -18,7 +18,9 @@ You can check all specs in `package.json`.
 
 ## Install extension locally (not via Chrome Webstore)
 
-Open the extension manager page of the Chromium-based browser > Enable "**Developer mode**" > "**Load unpackaged**" > Select the extension's build folder (eg. `dist/`). Don't forget to "pin" this extension in the extension bar.
+> **For tester**: Unzip `prod-packages/v0.0.1.zip` into a folder and then follow the next step!
+
+Open the extension manager page of the Chromium-based browser > Enable "**Developer mode**" > "**Load unpackaged**" > Select the extension's build folder (eg. `dist/`) or the unzipped folder.
 
 ## Demo how it works
 
@@ -43,6 +45,10 @@ yarn watch
 
 # (use webpack) build a prod version, package is built to dist-prod/
 yarn build
+# 💡 I've built a script to automatically archive the dist-prod/ folder
+# into a .zip file with the name of the current version
+# For example, prod-packages/v0.0.1.zip
+# You can use this .zip to upload to the Chrome Webstore!
 
 # (use vite) run playground mode, also in watch mode (no visibale built folder)
 yarn playground
