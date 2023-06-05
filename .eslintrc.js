@@ -36,7 +36,8 @@ module.exports = {
     'no-irregular-whitespace': 1,
     'no-unused-vars': 1,
     'prettier/prettier': ['warn', { singleQuote: true, trailingComma: 'none' }],
-    quotes: ['warn', 'single'],
+    // quotes: ['warn', 'single'],
+    quotes: 0,
     'spaced-comment': [1, 'always'],
     'max-len': [
       'warn',
@@ -48,6 +49,7 @@ module.exports = {
         ignoreStrings: true,
         ignoreTemplateLiterals: true
       }
-    ]
+    ],
+    'tailwindcss/no-custom-classname': 0
   }
 }

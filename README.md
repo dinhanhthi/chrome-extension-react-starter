@@ -1,23 +1,71 @@
-# react-ts-tailwind-starter
+# 🦖 react-ts-tailwind-starter
 
-If you're looking for a starter using TypeScript only (without React), check [this repository](https://github.com/dinhanhthi/chrome-extension-ts-starter)!
+An all-in-one starter for React developers that supports workspace (eslint, prettier, vscode settings,...) and also a playground mode for quick review of changes.
+
+💡 If you're looking for a starter using TypeScript only (without React), check [this repository](https://github.com/dinhanhthi/chrome-extension-ts-starter)!
 
 ## ✨ Tech specs
 
-React, TypeScript, Tailwind, ESLint, Prettier, VSCode settings.
+You can check all specs in `package.json`.
 
-## Install
+- **Javascript bundler**: [Webpack](https://webpack.js.org/) (for building the extension), [Vite](https://vitejs.dev/) (for the playground mode*).
+- **React**: [React core](https://reactjs.org/), [React Router DOM](https://reactrouter.com/en/main).
+- **Dev**: [ESLint](https://eslint.org/) (with all necessary plugins), [Prettier](https://prettier.io/).
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (with autoprefixer, postcss), [SCSS](https://sass-lang.com/) supported.
+- **Utilities**: [lodash](https://lodash.com/), [webextension-polyfill](https://github.com/mozilla/webextension-polyfill), [classnames](https://github.com/JedWatson/classnames), [react-icons](https://react-icons.github.io/react-icons/)
+
+*_What is the playground mode?_ Normally, when you make changes to the source codes, you have to reload the extension on the Extensions Manager page. This is annoying if you are just developing the style of a component. It's better if you can see the changes in real time. This is where the playground mode comes into play. We use Webpack to create our main extension bundle (in the `/dist` folder), and we use Vite for the Playground Mode. Read more in the section *Playground mode*.
+
+## Install extension locally (not via Chrome Webstore)
+
+Open the extension manager page of the Chromium-based browser > Enable "**Developer mode**" > "**Load unpackaged**" > Select the extension's build folder (eg. `dist/`). Don't forget to "pin" this extension in the extension bar.
+
+## Demo how it works
+
+> ⚠️ **Warning**: For the purpose of the demo, the extension is only enabled when you browse `https://www.google.com/`. Change this in the `src/static/manifest.json`!
+
+After the installation, go to `https://www.google.com/` to see a welcome panel is added at the bottom right of the page.
+
+By default it says `Hello anybody!`. You can open the popup by clicking the extension icon on the header bar to input with your name. After that, the panel changes to say `Hello <your input>!`
+
+The same input field is presented in the option page of the extension.
+
+You can also go to `http://localhost:5173/` when you work with the playground.
+
+## Installation
 
 ```bash
+# first install
 yarn
 
-# watch mode
-yarn start
+# (use webpack) dev, package is built to dist/
+yarn watch
+
+# (use webpack) build a prod version, package is built to dist-prod/
+yarn build
+
+# (use vite) run playground mode, also in watch mode (no visibale built folder)
+yarn playground
 ```
 
-Live preview in VSCode by using [Previewjs](https://previewjs.com/) and uncommenting the following line in `src/App.tsx`,
+## Playground mode
 
-```tsx
-// 👇 Uncomment only if you use Previewjs (https://previewjs.com/)
-// import './assets/tailwind.css'
+```bash
+yarn playground
 ```
+
+This mode runs a React app that uses the same components as the main app. Please note that in playground mode we cannot use api `browser` from `webextension-polyfill` nor `chrome` from Chrome API. Therefore we need to use 2 different files with names like `XXXBrowser.*` and `XXXPlayground.*` (for example, `helpersBrowser.ts` and `helpersPlayground`). The former is used in extension and the latter in playground mode.
+
+You can test each component (isolatedly from the main app) by adding it to the `src/react-playground/App.tsx` file.
+
+## Files in `styles/`
+
+- `tailwind.scss`: contains 3 tailwind assets. Note that, in `tailwind.config.js`, I use `important: '.dinhanhthi'` to make tailwind to work . This means that, the tailwind classes will only take effect inside the element that contains the class `dinhanhthi`.
+- The `content_script.scss` contains custom styles used only for the content script.
+- The `global.scss` contains custom styles used for both extension (contentscript, popup, options) and the playground.
+- The `option.scss` contains custom styles used only for the option page.
+- The `popup.scss` contains custom styles used only for the popup.
+
+## Tips and notes
+
+1. Change the version in both `package.json` and `manifest.json`. The former is for the version of the package, the latter is for the version of the extension. They are usually the same.

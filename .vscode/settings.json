@@ -1,4 +1,5 @@
 {
+  "editor.tabSize": 2,
   "css.validate": false, // used for @tailwindcss
   "scss.validate": false, // used for @tailwindcss,
   "typescript.preferences.quoteStyle": "single",
