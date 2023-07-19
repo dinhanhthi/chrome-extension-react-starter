@@ -1,4 +1,4 @@
-# 🦖 react-ts-tailwind-starter
+# 🦖 chrome-extension-react-starter
 
 An all-in-one starter for React developers that supports workspace (eslint, prettier, vscode settings,...) and **also a playground mode** for quick review of changes.
 
@@ -35,6 +35,8 @@ The same input field is presented in the option page of the extension.
 You can also go to `http://localhost:5173/` when you work with the playground.
 
 ## Installation
+
+> 💡 You can use `npm` if you want.
 
 ```bash
 # first install
