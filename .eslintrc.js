@@ -9,6 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:tailwindcss/recommended',
     'plugin:react/recommended',
+    'plugin:unicorn/recommended',
     'prettier' // make sure it's the last one,
   ],
   overrides: [],
@@ -21,7 +22,7 @@ module.exports = {
       tsx: true
     }
   },
-  plugins: ['react', 'tailwindcss', 'prettier'],
+  plugins: ['react', 'tailwindcss', 'prettier', 'unused-imports'],
   settings: {
     react: {
       version: 'detect'

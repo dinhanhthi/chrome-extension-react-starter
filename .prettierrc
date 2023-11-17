@@ -1,5 +1,9 @@
 {
-  "plugins": [],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-imports"
+  ],
   "arrowParens": "avoid",
   "semi": false,
   "singleQuote": true,

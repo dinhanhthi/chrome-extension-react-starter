@@ -3,6 +3,8 @@
     "jsx": "react",
     "module": "es6",
     "target": "es6",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true
