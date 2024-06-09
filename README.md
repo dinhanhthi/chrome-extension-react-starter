@@ -8,13 +8,13 @@ An all-in-one starter for React developers that supports workspace (eslint, pret
 
 You can check all specs in `package.json`.
 
-- **Javascript bundler**: [Webpack](https://webpack.js.org/) (for building the extension), [Vite](https://vitejs.dev/) (for the **playground mode***).
+- **Javascript bundler**: [Webpack](https://webpack.js.org/) (for building the extension), [Vite](https://vitejs.dev/) (for the **playground mode\***).
 - **React**: [React core](https://reactjs.org/), [React Router DOM](https://reactrouter.com/en/main).
 - **Dev**: [ESLint](https://eslint.org/) (with all necessary plugins), [Prettier](https://prettier.io/).
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (with autoprefixer, postcss), [SCSS](https://sass-lang.com/) supported.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (with autoprefixer, postcss), [SCSS](https://sass-lang.com/) supported, [shadcn/ui](https://ui.shadcn.com/).
 - **Utilities**: [lodash](https://lodash.com/), [webextension-polyfill](https://github.com/mozilla/webextension-polyfill), [classnames](https://github.com/JedWatson/classnames).
 
-**What is the playground mode?** Normally, when you make changes to the source codes, you have to reload the extension on the Extensions Manager page. This is annoying if you are just developing the style of a component. It's better if you can see the changes in real time. This is where the playground mode comes into play. We use Webpack to create our main extension bundle (in the `/dist` folder), and we use Vite for the Playground Mode. Read more in the section *Playground mode*.
+**What is the playground mode?** Normally, when you make changes to the source codes, you have to reload the extension on the Extensions Manager page. This is annoying if you are just developing the style of a component. It's better if you can see the changes in real time. This is where the playground mode comes into play. We use Webpack to create our main extension bundle (in the `/dist` folder), and we use Vite for the Playground Mode. Read more in the section _Playground mode_.
 
 ## Install extension locally (not via Chrome Webstore)
 
