@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import { RiLoader4Line } from 'react-icons/ri'
+import { LoadingIcon } from '../icons/loadingIcon'
 
 type NameInputProps = {
   // eslint-disable-next-line no-unused-vars
@@ -28,7 +28,7 @@ export default function NameInput(props: NameInputProps) {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <div className="flex h-fit w-fit gap-3">
+      <div className="flex gap-3 h-fit w-fit">
         <input
           ref={inputRef}
           className={cn(
@@ -49,14 +49,14 @@ export default function NameInput(props: NameInputProps) {
           {!isSaving && <div>Save</div>}
           {isSaving && (
             <div className="flex">
-              <RiLoader4Line className={cn('animate-spin text-[1.5em] font-semibold')} />
+              <LoadingIcon className={cn('animate-spin text-[1.5em] font-semibold')} />
             </div>
           )}
         </button>
       </div>
       {props.openOptionsPage && (
         <a
-          className="cursor-pointer italic text-slate-400 hover:text-slate-800"
+          className="italic cursor-pointer text-slate-400 hover:text-slate-800"
           onClick={props.openOptionsPage}
         >
           Open Options page

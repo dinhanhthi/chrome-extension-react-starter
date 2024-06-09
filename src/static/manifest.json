@@ -3,7 +3,7 @@
 
   "name": "Chrome Extension React Starter",
   "description": "A starter for quickly creating a Chrome Extension that uses React and Tailwind CSS by default.",
-  "version": "0.0.1",
+  "version": "0.0.3",
 
   "action": {
     "default_title": "Chrome Extension React Starter",

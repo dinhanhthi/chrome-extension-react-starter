@@ -8,13 +8,13 @@ An all-in-one starter for React developers that supports workspace (eslint, pret
 
 You can check all specs in `package.json`.
 
-- **Javascript bundler**: [Webpack](https://webpack.js.org/) (for building the extension), [Vite](https://vitejs.dev/) (for the playground mode*).
+- **Javascript bundler**: [Webpack](https://webpack.js.org/) (for building the extension), [Vite](https://vitejs.dev/) (for the **playground mode***).
 - **React**: [React core](https://reactjs.org/), [React Router DOM](https://reactrouter.com/en/main).
 - **Dev**: [ESLint](https://eslint.org/) (with all necessary plugins), [Prettier](https://prettier.io/).
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) (with autoprefixer, postcss), [SCSS](https://sass-lang.com/) supported.
-- **Utilities**: [lodash](https://lodash.com/), [webextension-polyfill](https://github.com/mozilla/webextension-polyfill), [classnames](https://github.com/JedWatson/classnames), [react-icons](https://react-icons.github.io/react-icons/)
+- **Utilities**: [lodash](https://lodash.com/), [webextension-polyfill](https://github.com/mozilla/webextension-polyfill), [classnames](https://github.com/JedWatson/classnames).
 
-*_What is the playground mode?_ Normally, when you make changes to the source codes, you have to reload the extension on the Extensions Manager page. This is annoying if you are just developing the style of a component. It's better if you can see the changes in real time. This is where the playground mode comes into play. We use Webpack to create our main extension bundle (in the `/dist` folder), and we use Vite for the Playground Mode. Read more in the section *Playground mode*.
+**What is the playground mode?** Normally, when you make changes to the source codes, you have to reload the extension on the Extensions Manager page. This is annoying if you are just developing the style of a component. It's better if you can see the changes in real time. This is where the playground mode comes into play. We use Webpack to create our main extension bundle (in the `/dist` folder), and we use Vite for the Playground Mode. Read more in the section *Playground mode*.
 
 ## Install extension locally (not via Chrome Webstore)
 
@@ -28,7 +28,7 @@ Open the extension manager page of the Chromium-based browser > Enable "**Develo
 
 After the installation, go to `https://www.google.com/` to see a welcome panel is added at the bottom right of the page.
 
-By default it says `Hello anybody!`. You can open the popup by clicking the extension icon on the header bar to input with your name. After that, the panel changes to say `Hello <your input>!`
+By default it says `Hello I'm Chrome Extension React Starter!`. You can open the popup by clicking the extension icon on the header bar to input with your name. After that, the panel changes to say `Hello <your input>!`
 
 The same input field is presented in the option page of the extension.
 
@@ -54,6 +54,9 @@ yarn build
 
 # (use vite) run playground mode, also in watch mode (no visibale built folder)
 yarn playground
+
+# interactive upgrade packages
+yarn upgrade-interactive --latest
 ```
 
 ## Playground mode

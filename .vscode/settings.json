@@ -3,7 +3,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "css.validate": false, // used for @tailwindcss
   "scss.validate": false, // used for @tailwindcss,
@@ -23,5 +23,8 @@
   },
   "editor.rulers": [100],
   // 👇 For error in src/styles/preflight.scss
-  "tailwindCSS.lint.invalidConfigPath": "ignore"
+  "tailwindCSS.lint.invalidConfigPath": "ignore",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }

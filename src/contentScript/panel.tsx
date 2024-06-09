@@ -11,11 +11,10 @@ export default function Panel(props: PanelProps) {
     <div
       className={cn(
         props.className,
-        'w-96 h-32 bg-sky-600 text-white flex items-center justify-center text-2xl font-semibold',
-        'rounded-lg shadow-lg'
+        'w-96 h-32 bg-sky-600 text-white flex items-center justify-center text-2xl font-semibold rounded-lg shadow-lg'
       )}
     >
-      👋 Hello {props.name || 'anybody'}!
+      👋 Hello {props.name || 'I\'m Chrome Extension React Starter!'}!
     </div>
   )
 }
