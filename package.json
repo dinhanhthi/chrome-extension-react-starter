@@ -5,10 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "author": "Anh-Thi Dinh",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/IdetaAutomation/lnkd-extension"
-  },
   "scripts": {
     "watch": "rm -rf dist/* && webpack --watch --progress --config webpack.config.js --mode=development",
     "build": "sh ./scripts/build_prod.sh",
