@@ -2,7 +2,7 @@ import cn from 'classnames'
 import React from 'react'
 
 import Panel from '../contentScript/panel'
-import { handleSaveName, openOptionsPage } from '../helpers/helpersBrowser'
+import { handleSaveName, openOptionsPage } from '../helpers/helpersPlayground'
 import NameInput from '../popup/nameInput'
 import '../styles/global.scss'
 import '../styles/options.scss'
